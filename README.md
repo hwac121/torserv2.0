@@ -9,6 +9,9 @@ If you truly want to be anonymous on the web this is the way to do it.
 For use with a browser be sure to setup the socks5 proxy service in your browser.
 
 Browser settings:
+
 Set socks5 host to 127.0.0.1
+
 Set port to 9050
+
 Check the box "Proxy DNS when using Socks5"
