@@ -18,7 +18,7 @@
 
 splash(){
 	figlet "Tor Serv" | lolcat
-	echo -e "\e[32mVersion 1.0 for Kali Linux\e[0m"
+	echo -e "\e[32mVersion 2.0 for Kali Linux\e[0m"
 	echo -e "\e[32mby Majik Cat Security\e[0m"
 }
 
@@ -64,14 +64,6 @@ if [ "" == "$PKG_OK" ]; then
   nala install tor
 fi
 
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' tornet | grep "install ok installed")
-echo Checking for tornet: $PKG_OK
-if [ "" == "$PKG_OK" ]; then
-  echo -e "\e[35mtornet not installed. Attempting to install tornet now...\e[0m"
-  sleep 0.15
-  apt-get install tornet
-fi
-
 #===================================================================
 #			             MAIN INSTALLATION
 #===================================================================
@@ -90,4 +82,3 @@ echo -e " "
 echo -e "\e[35mJust type torserv anywhere in terminal to use this utility.\e[0m"
 sleep 3
 xterm -hold -T 'Tor Serv Help' -geometry 100x40+500+400 -e cat torserv-help
-./torserv.sh

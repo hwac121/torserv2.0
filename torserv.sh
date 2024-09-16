@@ -33,7 +33,7 @@ fi
 
 splash(){
 	figlet "Tor Serv" | lolcat
-	echo -e "\e[32mVersion 1.0\e[0m"
+	echo -e "\e[32mVersion 2.0\e[0m"
 	echo -e "\e[32mby Majik Cat Security for Kali Linux\e[0m"
 	echo -e "\e[30mIt is recommended to read the Help file (number 6) before using this script.\e[0m"
 }
@@ -145,7 +145,7 @@ while [ "$menu" != 1 ]; do
 			echo -e "tornet is now actively changing your IP address through the TOR service."
 		break
 		;;
-		"Check Anon IP"(){
+		"Check Anon IP")
 			clear
 			splash
 			echo " "
@@ -153,7 +153,7 @@ while [ "$menu" != 1 ]; do
 			sleep 5
 		break
 		;;
-		"Stop tornet Service"(){
+		"Stop tornet Service")
 			clear
 			splash
 			echo " "
@@ -177,7 +177,7 @@ while [ "$menu" != 1 ]; do
 			clear
 			splash
 			echo " "
-			echo -e "\e[32mClosing Tor Serv v1.0\e[0m"
+			echo -e "\e[32mClosing Tor Serv v2.0\e[0m"
 			sleep 1
 			menu=1
 			clear
