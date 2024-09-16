@@ -6,6 +6,8 @@ You can tell it how many times to change or to keep chainige indefinitely.
 
 If you truly want to be anonymous on the web this is the way to do it.
 
+NOTE:
+
 For use with a browser be sure to setup the socks5 proxy service in your browser.
 
 Browser settings:
