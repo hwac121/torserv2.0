@@ -32,10 +32,10 @@ fi
 #==================================
 
 splash(){
-	figlet "Tor Serv" | lolcat
+	figlet "Tor Serv 2.0" | lolcat
 	echo -e "\e[32mVersion 2.0\e[0m"
 	echo -e "\e[32mby Majik Cat Security for Kali Linux\e[0m"
-	echo -e "\e[30mIt is recommended to read the Help file (number 6) before using this script.\e[0m"
+	echo -e "\e[30mIt is recommended to read the Help file (number 7) before using this script.\e[0m"
 }
 EnableT(){
 	systemctl enable tor.service
@@ -60,7 +60,7 @@ HelpT(){
 #              MENU               #
 #==================================
 
-options=( "Start Tor Service" "Stop Tor Service" "Check Status" "Enable Tor Service" "Disable Tor Service" "Stay Anonymous" "Check Anon IP" "Stop tornet Service" "Help" "Quit")
+options=( "Start Tor Service" "Stop Tor Service" "Check Status" "Enable tor.service" "Disable tor.service" "Stay Anonymous" "Help" "Quit")
 PS3='Choose what action to take: '
 while [ "$menu" != 1 ]; do
 	clear
@@ -101,12 +101,11 @@ while [ "$menu" != 1 ]; do
 			splash
 			echo " "
 			echo -e "\e[31mChecking Tor Service status...\e[0m"
+			echo -e "\e[31mNOTE:\e[0m \e[7mHit the q key to return to main menu...\e[0m"
 			StatusT
-			echo -e "\e[31mNOTE:\e[0m \e[7mYou will return to the main menu in 5 seconds...\e[0m"
-			sleep 5
 		break
 		;;
-		"Enable Tor Service")
+		"Enable tor.service")
 			clear
 			splash
 			echo " "
@@ -116,7 +115,7 @@ while [ "$menu" != 1 ]; do
 			sleep 2
 		break
 		;;
-		"Disable Tor Service")
+		"Disable tor.service")
 			clear
 			splash
 			echo " "
@@ -131,7 +130,7 @@ while [ "$menu" != 1 ]; do
 			splash
 			echo " "
 			echo -e "\e[31mThis will start the tornet service to constantly change your IP address while on the TOR Service.\e[0m"
-			echo -e "\e[30mBE SURE THE TOR SERVICE IS STARTED FIRST!\e[0m"
+			echo -e "\e[30mBE SURE THE TOR SERVICE IS STARTED FIRST! - Use Ctrl + C to terminate.\e[0m"
 			echo " "
 			sleep 1
 			echo -e "\e[33mEnter time to change IP address in seconds (i.e. 1min - 60, 2min = 30)\e[0m"
@@ -139,29 +138,7 @@ while [ "$menu" != 1 ]; do
 			read TorTime
 			echo -e "\e[33mHow many times do you want your IP to chage? Enter 0 to always keep changing.\e[0m"
 			read TorChange
-			tornet --interval $TorTime --count $TorChange
-			sleep 3
-			echo " "
-			echo -e "tornet is now actively changing your IP address through the TOR service."
-		break
-		;;
-		"Check Anon IP")
-			clear
-			splash
-			echo " "
-			tornet --ip
-			sleep 5
-		break
-		;;
-		"Stop tornet Service")
-			clear
-			splash
-			echo " "
-			tornet --stop
-			sleep 5
-			echo " "
-			echo -e "\e[32mtornet services stopped!"
-			sleep 3 
+			xterm -T 'tornet Service' -geometry 100x40+700+400 -e tornet --interval $TorTime --count $TorChange
 		break
 		;;
 		"Help")

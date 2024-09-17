@@ -17,7 +17,7 @@
 #=======================================================================
 
 splash(){
-	figlet "Tor Serv" | lolcat
+	figlet "Tor Serv 2.0" | lolcat
 	echo -e "\e[32mVersion 2.0 for Kali Linux\e[0m"
 	echo -e "\e[32mby Majik Cat Security\e[0m"
 }
