@@ -19,3 +19,5 @@ Set socks5 host to 127.0.0.1
 Set port to 9050
 
 Check the box "Proxy DNS when using Socks5"
+
+THIS IS ORIGINAL SOFTWARE - You may use this or modify it however you like, all I ask is to be given credit as the original author.
