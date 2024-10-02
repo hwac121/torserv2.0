@@ -4,8 +4,8 @@
 # Version: 2.0
 # Date: Sept. 16, 2024
 # Contact: hwac121@ptorbox.onion
-
-# GitHub: https://github.com/hwac121/TorServ2.git
+#Author: RJ Levesque, Jr. - Majik Cat Security
+# GitHub: https://github.com/hwac121
 
 #-----------------------------------------------------------------
 
